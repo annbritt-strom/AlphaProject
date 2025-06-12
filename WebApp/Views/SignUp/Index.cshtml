@@ -1,0 +1,55 @@
+﻿@model SignUpViewModel
+
+@{
+    Layout = "_SignUpLayout";
+    ViewData["Title"] = "Sign Up";
+}
+
+<div class="card">
+
+    <div class="card-header">
+        <h1>Create Account</h1>
+    </div>
+
+    <div class="card-body">
+        <form method="post" asp-controller="SignUp" asp-action="Index" novalidate>
+            <div class="form-group">
+                <label class="form-label" asp-for="FullName"></label>
+                <input class="form-input" asp-for="FullName">
+                <span asp-validation-for="FullName"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" asp-for="Email"></label>
+                <input class="form-input" asp-for="Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" asp-for="Password"></label>
+                <input class="form-input" asp-for="Password">
+                <span asp-validation-for="Password"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" asp-for="ConfirmPassword"></label>
+                <input class="form-input" asp-for="ConfirmPassword">
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+
+            <div class="form-checkbox-group">
+                <label class="form-checkbox">
+                    <input asp-for="AcceptTerms" class="form-checkbox-input" /> I accept <a href="#" target="_blank">Terms and Conditions</a>
+                    <span class="checkbox-box"></span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn">Create Account</button>
+        </form>
+    </div>
+
+    <div class="card-footer">
+        <p>Already have an account? <a asp-controller="LogIn" asp-action="Index">Log in</a></p>
+    </div>
+
+</div>

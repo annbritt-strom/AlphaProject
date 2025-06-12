@@ -806,6 +806,7 @@ input[type="date"] {
     grid-area: action;
     width: 40px;
     height: 40px;
+    position: relative;
 }
 
 #projects .card-body {
@@ -840,19 +841,26 @@ input[type="date"] {
     height: 3rem;
 }
 
-    #projects .dropdown-action.edit-action {
-        margin-bottom: 0.5rem;
+.project-actions-container .dropdown {
+    left: auto;
+    right: -5px;
+    top: 95%;
+    margin-top: .3em;
+}
+
+#projects .dropdown-action.edit-action {
+    margin-bottom: 0.5rem;
+}
+
+    #projects .dropdown-action.edit-action:hover {
+        background: var(--grey-200);
     }
 
-        #projects .dropdown-action.edit-action:hover {
-            background: var(--grey-200);
-        }
-
-    #projects .dropdown-action.delete {
-        margin-top: 0.5rem;
-        background: var(--color-surface);
-        color: var(--red) !important;
-    }
+#projects .dropdown-action.delete {
+    margin-top: 0.5rem;
+    background: var(--color-surface);
+    color: var(--red) !important;
+}
 
 .delete:hover {
     background: var(--trans-red) !important;

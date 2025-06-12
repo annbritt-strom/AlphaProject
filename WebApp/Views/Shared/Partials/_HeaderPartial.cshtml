@@ -2,16 +2,9 @@
     <button type="button" class="btn-settings" data-type="dropdown" data-target="#settings-dropdown">
         <img src="images/settings.svg" alt="settings">
     </button>
-    <div id="settings-dropdown" class="dropdown">
-        <div class="current-account"><img src="images/user-template.svg">John Doe</div>
-
-        <a href="#" class="btn-logout">
-            <img src="images/logout.svg"><p>Log out</p>
-        </a>
-    </div>
+    @await Html.PartialAsync("Dropdowns/_SettingsDropdownPartial")
     <hr class="vertical-divider">
     <button type="button" class="btn-account">
         <img src="images/user-template.svg" alt="avatar">
-        </i>
     </button>
 </header>
