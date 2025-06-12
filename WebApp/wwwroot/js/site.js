@@ -1,4 +1,5 @@
-﻿const addProjectDescriptionTextArea = document.getElementById('add-project-description')
+﻿// Quill Editor
+const addProjectDescriptionTextArea = document.getElementById('add-project-description')
 const addProjectDescriptionWithQuill = new Quill('#add-project-editor', {
     modules: {
         syntax: true,

@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Projects";
+}
+
+<div id="projects" class="page">
+    <div class="projects-header">
+        <h2>Projects</h2>
+        <button class="btn add-project-btn" data-type="modal" data-target="#add-project-modal">
+            <i class="bi bi-plus"></i>Add Project
+        </button>
+    </div>
+
+    <nav class="project-tabs">
+        <button class="tab active" data-target="#all">ALL</button>
+        <button class="tab" data-target="#started">STARTED</button>
+        <button class="tab" data-target="#completed">COMPLETED</button>
+    </nav>
+
+    <section id="all" class="projects-grid">
+
+        <div class="project card" data-project-id="1">
+            <div class="card-header">
+                <div class="project-image">
+                    <img src="images/project-icon.svg" alt="project icon">
+                </div>
+                <div class="project-info-flex">
+                    <h6 class="project-title">Website Redesign</h6>
+                    <span class="project-client">Gitlab Inc.</span>
+                </div>
+                <div class="project-actions-container">
+                    <button type="button" data-type="dropdown" data-target="#project-dropdown-1" class="btn-action">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                    <div id="project-dropdown-1" class="dropdown">
+                        <nav class="dropdown-options">
+                            <button data-type="modal" data-target="#edit-project-modal" class="dropdown-action edit-action">
+                                <i class="bi bi-pencil-square"></i>
+                                <span>Edit</span>
+                            </button>
+                        </nav>
+                        <div class="horizontal-divider"></div>
+                        <nav class="dropdown-options">
+                            <button class="dropdown-action edit-action delete">
+                                <i class="bi bi-trash3-fill"></i>
+                                <span>Delete Project</span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p>It is necessary to develop a website redesign in a corporate style.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="started" class="projects-grid hidden">
+    </section>
+
+    <section id="completed" class="projects-grid hidden">
+    </section>
+</div>
+
+@await Html.PartialAsync("Modals/_AddProjectModalPartial")
+@await Html.PartialAsync("Modals/_EditProjectModalPartial")

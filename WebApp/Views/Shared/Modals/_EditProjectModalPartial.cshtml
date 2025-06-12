@@ -1,0 +1,93 @@
+﻿<section id="edit-project-modal" class="modal">
+    <div class="card">
+        <div class="card-header">
+            <h3>Edit Project</h3>
+            <button class="btn-close" data-type="close" data-target="#edit-project-modal"><img src="images/close.svg" alt="Exit create project"></button>
+        </div>
+
+        <div class="card-body">
+            <form asp-controller="" asp-action="" method="post" enctype="multipart/form-data" novalidate>
+
+                <div class="form-group">
+                    <label class="form-label">Project Name</label>
+                    <input class="form-input" type="text" placeholder="Project name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Client Name</label>
+                    <input class="form-input" type="text" placeholder="Client name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Project Name</label>
+                    <input class="form-input" type="text" placeholder="Project Name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <div class="text-area-container">
+                        <textarea id="edit-project-description" class="hide"></textarea>
+                        <div id="edit-project-editor" class="quill-editor"></div>
+                        <div id="edit-project-toolbar" class="quill-toolbar">
+                            <span class="ql-formats">
+                                <button class="ql-bold"></button>
+                                <button class="ql-italic"></button>
+                                <button class="ql-underline"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-align" value=""></button>
+                                <button class="ql-align" value="center"></button>
+                                <button class="ql-align" value="right"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-list" value="bullet"></button>
+                                <button class="ql-list" value="ordered"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-link" value=""></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-horizontal">
+                    <div class="form-group">
+                        <label class="form-label">Start Date</label>
+                        <input class="form-input" type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">End Date</label>
+                        <input class="form-input" type="date">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Budget</label>
+                    <div class="form-input-with-icon">
+                        <img src="images/dollar.svg">
+                        <input class="form-input" type="text" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Project Satuts</label>
+                    <div class="form-select" data-placeholder="Select current status">
+                        <button type="button" class="form-select-trigger">
+                            <span class="form-select-text"></span><i class="bi bi-three-dots"></i>
+                        </button>
+
+                        <ul class="form-select-options">
+                            <li class="form-select-option" data-value="started">Started</li>
+                            <li class="form-select-option" data-value="finished">Finished</li>
+                        </ul>
+
+                        <input type="hidden" name="status-select-value" value="" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Create</button>
+            </form>
+        </div>
+    </div>
+</section>
