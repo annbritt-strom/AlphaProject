@@ -2,7 +2,7 @@
 
 namespace WebApp.Controllers
 {
-    public class LogInController : Controller
+    public class ProjectsController : Controller
     {
         public IActionResult Index()
         {
